@@ -1,0 +1,88 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-stone-50: #FBF7EF;
+  --primitive-color-stone-100: #F3ECDC;
+  --primitive-color-stone-200: #E6DBC3;
+  --primitive-color-stone-300: #D2C3A0;
+  --primitive-color-marina-400: #4C7C99;
+  --primitive-color-marina-600: #245470;
+  --primitive-color-marina-800: #15384C;
+  --primitive-color-marina-950: #0D1F2D;
+  --primitive-color-brass-500: #B8863F;
+  --primitive-color-brass-700: #8A6329;
+  --primitive-color-terracotta-500: #C6552E;
+  --primitive-color-terracotta-700: #963E20;
+  --primitive-color-terracotta-900: #4E1F10;
+  --primitive-font-display: var(--font-newsreader), 'Newsreader', Georgia, serif;
+  --primitive-font-sans: var(--font-inter), system-ui, sans-serif;
+  --primitive-font-mono: var(--font-space-mono), 'SF Mono', monospace;
+  --primitive-motion-duration-micro: 160ms;
+  --primitive-motion-duration-base: 320ms;
+  --primitive-motion-duration-lift: 420ms;
+  --primitive-motion-duration-reveal: 1s;
+  --primitive-motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --primitive-motion-ease-swing: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --primitive-tracking-display: -0.01em;
+  --primitive-tracking-label: 0.22em;
+}
+
+/* === SEMANTIC === */
+:root {
+  --background: #FBF7EF;
+  --foreground: #0D1F2D;
+  --card: #F3ECDC;
+  --card-foreground: #0D1F2D;
+  --popover: #FBF7EF;
+  --popover-foreground: #0D1F2D;
+  --primary: #0D1F2D;
+  --primary-foreground: #FBF7EF;
+  --secondary: #E6DBC3;
+  --secondary-foreground: #0D1F2D;
+  --muted: #F3ECDC;
+  --muted-foreground: #245470;
+  --accent: #E6DBC3;
+  --accent-foreground: #0D1F2D;
+  --destructive: #963E20;
+  --border: #D2C3A0;
+  --input: #D2C3A0;
+  --ring: #B8863F;
+  --radius: 0.5rem;
+  --marina: #15384C;
+  --marina-deep: #0D1F2D;
+  --brass: #B8863F;
+  --brass-dim: #8A6329;
+  --terracotta: #C6552E;
+  --terracotta-deep: #963E20;
+  --surface-line: #D2C3A0;
+  --type-display: var(--font-newsreader), 'Newsreader', Georgia, serif;
+  --type-body: var(--font-inter), system-ui, sans-serif;
+  --type-label: var(--font-space-mono), 'SF Mono', monospace;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-swing: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-micro: 160ms;
+  --duration-base: 320ms;
+  --duration-lift: 420ms;
+  --duration-reveal: 1s;
+  --tracking-display: -0.01em;
+  --tracking-label: 0.22em;
+}
+
+/* === COMPONENTS === */
+:root {
+  --hero-title-size: clamp(2.75rem, 7vw, 5.5rem);
+  --hero-title-leading: 1.02;
+  --hero-kicker-size: 0.72rem;
+  --pegboard-hole-color: #15384C;
+  --pegboard-panel-bg: #E6DBC3;
+  --pegboard-peg-color: #B8863F;
+  --pegboard-fob-shadow: 0 14px 24px -10px rgba(13, 31, 45, 0.45);
+  --button-primary-bg: #C6552E;
+  --button-primary-fg: #FBF7EF;
+  --button-primary-hover-bg: #963E20;
+  --button-primary-hover-fg: #FBF7EF;
+  --button-ghost-border: #4C7C99;
+  --button-ghost-hover-border: #0D1F2D;
+}
