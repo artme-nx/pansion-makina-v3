@@ -1,0 +1,8 @@
+Stranica online (GitHub Pages):
+https://artme-nx.github.io/pansion-makina-v3/
+
+Repozitorij:
+https://github.com/artme-nx/pansion-makina-v3
+
+Objavljeno: 2026-07-11
+Deploy: gh-pages branch (statički export iz `npm run build` → out/)
