@@ -7,6 +7,7 @@ const LINKS = [
   { href: "#sobe", label: "Sobe" },
   { href: "#sadrzaji", label: "Sadržaji" },
   { href: "#dorucak", label: "Doručak" },
+  { href: "#konoba", label: "Konoba" },
   { href: "#lokacija", label: "Lokacija" },
   { href: "#kontakt", label: "Kontakt" },
 ];

@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import { BedDouble, Users, Waves, Building2, Wind, Wifi, Tv, ShowerHead } from "lucide-react";
+import { Photo } from "@/components/photo";
 
 type RoomKey = {
   id: string;
@@ -13,6 +14,8 @@ type RoomKey = {
   amenities: string[];
   tone: "terracotta" | "marina" | "brass";
   icon: typeof BedDouble;
+  photo: string;
+  photoAlt: string;
 };
 
 const ROOM_KEYS: RoomKey[] = [
@@ -27,6 +30,9 @@ const ROOM_KEYS: RoomKey[] = [
     amenities: ["Klima uređaj", "Besplatan WiFi", "TV", "Privatna kupaonica s tušem"],
     tone: "marina",
     icon: BedDouble,
+    photo: "/img/pansion-makina-soba-dvokrevetna.webp",
+    photoAlt:
+      "Prostrana svijetla soba pansiona Makina s bračnim krevetom, foteljom i kamenim podom u bež tonovima",
   },
   {
     id: "pogled-more",
@@ -39,6 +45,9 @@ const ROOM_KEYS: RoomKey[] = [
     amenities: ["Klima uređaj", "Besplatan WiFi", "TV", "Radni stol"],
     tone: "terracotta",
     icon: Waves,
+    photo: "/img/pansion-makina-soba-balkon.webp",
+    photoAlt:
+      "Soba pansiona Makina sa širokim balkonskim vratima i zavjesama, dva spojena kreveta i zidne svjetiljke",
   },
   {
     id: "trokrevetna",
@@ -51,6 +60,9 @@ const ROOM_KEYS: RoomKey[] = [
     amenities: ["Klima uređaj", "Besplatan WiFi", "TV", "Sef"],
     tone: "brass",
     icon: Users,
+    photo: "/img/pansion-makina-soba-tv.webp",
+    photoAlt:
+      "Soba pansiona Makina s TV-om na zidu, toaletnim stolićem uz prozor i ormarom od svijetlog drva",
   },
   {
     id: "obiteljska",
@@ -63,6 +75,9 @@ const ROOM_KEYS: RoomKey[] = [
     amenities: ["Klima uređaj", "Besplatan WiFi", "TV", "Privatna kupaonica"],
     tone: "marina",
     icon: Building2,
+    photo: "/img/pansion-makina-soba-klima.webp",
+    photoAlt:
+      "Prostrana soba pansiona Makina s klima uređajem, velikim ormarom i radnim stolom uz krevet",
   },
 ];
 
@@ -182,7 +197,7 @@ export function KeyPegboard() {
         className="mt-6 rounded-2xl border border-border bg-card px-6 py-8 sm:px-10"
       >
         {selected ? (
-          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
             <div>
               <p className="text-label text-terracotta">Ključ {selected.tag} — odabran</p>
               <h3 className="mt-2 font-display text-2xl text-foreground sm:text-3xl">
@@ -205,13 +220,23 @@ export function KeyPegboard() {
                   );
                 })}
               </ul>
+              <a
+                href="tel:+385954400155"
+                className="mt-7 inline-block rounded-full bg-terracotta px-6 py-3 text-center text-sm uppercase tracking-[0.12em] text-[var(--button-primary-fg)] transition-colors hover:bg-[var(--button-primary-hover-bg)]"
+              >
+                Upit za ovu sobu
+              </a>
             </div>
-            <a
-              href="tel:+385954400155"
-              className="justify-self-start rounded-full bg-terracotta px-6 py-3 text-center text-sm uppercase tracking-[0.12em] text-[var(--button-primary-fg)] transition-colors hover:bg-[var(--button-primary-hover-bg)] md:justify-self-end"
-            >
-              Upit za ovu sobu
-            </a>
+            <Photo
+              key={selected.id}
+              src={selected.photo}
+              alt={selected.photoAlt}
+              width={1400}
+              height={933}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 768px) 44vw, 88vw"
+            />
           </div>
         ) : (
           <p className="text-center text-muted-foreground">

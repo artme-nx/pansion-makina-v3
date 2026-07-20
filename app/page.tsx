@@ -1,4 +1,6 @@
 import { KeyPegboard } from "@/components/key-pegboard";
+import Image from "next/image";
+import { Photo, BASE } from "@/components/photo";
 import {
   Wind,
   Wifi,
@@ -61,7 +63,17 @@ export default function Home() {
             </a>
           </div>
 
-          <dl className="reveal mt-14 grid grid-cols-1 gap-6 border-t border-border pt-8 sm:grid-cols-3">
+          <Photo
+            src="/img/pansion-makina-pogled-marina-vodice.webp"
+            alt="Pogled s pansiona Makina na vodičku rivu i vezove ACI marine s jedrilicama, ispod crveni krovovi kioska na obali"
+            width={1920}
+            height={1280}
+            priority
+            sizes="(min-width: 1024px) 1100px, 92vw"
+            className="reveal mt-14 aspect-[16/9] w-full md:aspect-[21/9]"
+          />
+
+          <dl className="reveal mt-12 grid grid-cols-1 gap-6 border-t border-border pt-8 sm:grid-cols-3">
             {NEARBY.map((n) => (
               <div key={n.label} className="flex items-start gap-3">
                 <n.icon className="mt-0.5 h-5 w-5 shrink-0 text-brass" strokeWidth={1.75} />
@@ -89,6 +101,36 @@ export default function Home() {
           <div className="mt-12">
             <KeyPegboard />
           </div>
+
+          <div className="reveal mt-8 grid gap-5 sm:grid-cols-3">
+            <Photo
+              src="/img/pansion-makina-soba-bracni-krevet.webp"
+              alt="Soba pansiona Makina s bračnim krevetom, narančastim jastucima i naslonjačem uz zid"
+              width={1400}
+              height={933}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-soba-radni-stol.webp"
+              alt="Soba pansiona Makina s bijelim radnim stolom i televizorom nasuprot kreveta"
+              width={1400}
+              height={933}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-soba-pogled.webp"
+              alt="Uredno pospremljen krevet u sobi pansiona Makina, sa zidnim svjetiljkama i slikom iznad uzglavlja"
+              width={1400}
+              height={933}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -109,6 +151,36 @@ export default function Home() {
               </li>
             ))}
           </ul>
+
+          <div className="reveal mt-14 grid gap-5 sm:grid-cols-3">
+            <Photo
+              src="/img/pansion-makina-ulaz-kameni-zid.webp"
+              alt="Recepcija pansiona Makina — drveni pult s prospektima, kameni zidovi i stubište prema sobama"
+              width={1200}
+              height={800}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-interijer-kameni-zid.webp"
+              alt="Predvorje pansiona Makina s foteljama uz očuvani kameni zid i stubištem s kovanom ogradom"
+              width={1400}
+              height={933}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-kupaonica.webp"
+              alt="Privatna kupaonica u sobi pansiona Makina s tuš kabinom, umivaonikom i ogledalom"
+              width={1200}
+              height={800}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 30vw, 92vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -129,14 +201,68 @@ export default function Home() {
               Šibensko-kninskoj županiji.
             </p>
           </div>
-          <div
-            aria-hidden
-            className="reveal h-64 rounded-3xl md:h-80"
-            style={{
-              background:
-                "linear-gradient(160deg, var(--marina) 0%, var(--marina-deep) 55%, var(--terracotta-deep) 100%)",
-            }}
+          <Photo
+            src="/img/pansion-makina-restoran-interijer.webp"
+            alt="Blagovaonica restorana u prizemlju zgrade pansiona Makina — dugi stolovi s ljubičastim nadstolnjacima, bijele stolice i kameni zid"
+            width={1024}
+            height={683}
+            className="reveal aspect-[3/2] w-full"
+            sizes="(min-width: 768px) 46vw, 92vw"
           />
+        </div>
+      </section>
+
+      {/* KONOBA, PIZZA & COCKTAIL BAR — the ground floor of the same building */}
+      <section id="konoba" className="px-5 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-5xl">
+          <p className="reveal text-label text-terracotta">U prizemlju iste zgrade</p>
+          <h2 className="reveal mt-3 max-w-xl font-display text-3xl text-foreground sm:text-4xl">
+            Konoba, pizza iz krušne peći i cocktail bar
+          </h2>
+          <p className="reveal mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+            Pansion, restoran s pizzerijom i caffe/night bar dijele istu adresu i istog domaćina —
+            večera i izlazak su na istom mjestu gdje spavate. Bar u prizemlju radi do kasno, pa
+            sobe iznad nisu izbor za goste koji traže potpunu tišinu.
+          </p>
+
+          <div className="reveal mt-12 grid gap-5 sm:grid-cols-2">
+            <Photo
+              src="/img/pansion-makina-jelo-konoba-1.webp"
+              alt="Carpaccio s kaparima, maslinama i listićima sira, posluženo na bijelom ovalnom tanjuru na drvenom stolu"
+              width={1200}
+              height={800}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 46vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-jelo-konoba-2.webp"
+              alt="Salata s trakama pečene piletine, svježim povrćem i bijelim umakom u dubokom bijelom tanjuru"
+              width={1200}
+              height={800}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 46vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-znak-sobe-restaurant.webp"
+              alt="Svjetleći znak MAKINA na zupčaniku ispred objekta, s natpisima SOBE, RESTAURANT, PIZZA i COCKTAIL BAR"
+              width={1024}
+              height={683}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 46vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-night-club.webp"
+              alt="Puni night bar u prizemlju objekta u večernjim satima, gosti pod plavim i ljubičastim svjetlima ispod staklenog krova"
+              width={1024}
+              height={683}
+              radius="rounded-2xl"
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 640px) 46vw, 92vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -166,12 +292,38 @@ export default function Home() {
               Obala I. Juričev Čota 20, 22211 Vodice
             </span>
           </div>
+
+          <div className="reveal mt-12 grid gap-5 md:grid-cols-2">
+            <Photo
+              src="/img/pansion-makina-zgrada-riva-vodice.webp"
+              alt="Pogled odozgo na natkrivenu terasu konobe i kamenu zgradu pansiona Makina, s vezovima marine u pozadini"
+              width={1400}
+              height={933}
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 768px) 46vw, 92vw"
+            />
+            <Photo
+              src="/img/pansion-makina-terasa-pogled-marina.webp"
+              alt="Ograda terase ukrašena ribarskim mrežama i loncima s biljem, iza nje jarboli jedrilica u marini Vodice"
+              width={1400}
+              height={933}
+              className="aspect-[3/2] w-full"
+              sizes="(min-width: 768px) 46vw, 92vw"
+            />
+          </div>
         </div>
       </section>
 
       {/* CONTACT / BOOKING CTA */}
       <section id="kontakt" className="px-5 py-24 md:px-8 md:py-32">
         <div className="reveal mx-auto max-w-3xl rounded-3xl border border-border bg-[var(--marina-deep)] px-6 py-14 text-center sm:px-14">
+          <Image
+            src={`${BASE}/img/makina-logo.png`}
+            alt="Makina Vodice"
+            width={160}
+            height={79}
+            className="mx-auto mb-7 h-auto w-32"
+          />
           <p className="text-label text-brass">Rezervacije</p>
           <h2 className="mt-3 font-display text-3xl text-[var(--button-primary-fg)] sm:text-4xl">
             Rezervirajte svoj ključ
